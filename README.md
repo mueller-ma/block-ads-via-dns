@@ -1,7 +1,7 @@
 #Block ads and malware via local DNS server
 
 #Installation
-##Debian
+##Debian, Raspbian & Ubuntu
 - Install DNS Server: `sudo apt install bind9`
 - Add this to /etc/bind/named.conf: `include "/etc/bind/named.conf.blocked";`
 - Create db.blocked and add this:
@@ -24,6 +24,6 @@ $TTL    86400   ; one day
 ##Router / DHCP Server
 Change DNS Server in the DHCP settings to the STATiC IP of your Debian Server. If you are asked for a second DNS server enter the same IP twice.
 
-#Optional
+##Optional
 - Add local blacklist and whitelist
 - Create cronjob
