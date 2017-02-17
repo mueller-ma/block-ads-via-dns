@@ -22,7 +22,8 @@ $TTL    86400   ; one day
 - Run generate-zonefile.sh `./generate-zonefile.sh`
 
 ##Router / DHCP Server
-Change DNS Server in the DHCP settings to the STATiC IP of your Debian Server. If you are asked for a second DNS server enter the same IP twice.
+- Give your Debian server a static IP
+- Change DNS Server in the DHCP settings to the IP of your Debian Server. If you are asked for a second DNS server enter the same IP twice.
 
 ##Optional
 - Add local blacklist and whitelist
