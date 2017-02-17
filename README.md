@@ -1,5 +1,4 @@
-# block-ads-via-dns
-Block ads and malware via local DNS server
+#Block ads and malware via local DNS server
 
 #Installation
 ##Debian
