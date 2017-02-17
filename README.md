@@ -28,3 +28,7 @@ $TTL    86400   ; one day
 ##Optional
 - Add local blacklist and whitelist
 - Create cronjob
+
+#Limitations
+- https://github.com/StevenBlack/hosts/issues/243
+- The db.blocked will cause some errors on bind start
