@@ -1,7 +1,8 @@
 # block-ads-via-dns
 Block ads and malware via local DNS server
 
-Debian
+#Installation
+##Debian
 - Install DNS Server: `sudo apt install bind9`
 - Add this to /etc/bind/named.conf: `include "/etc/bind/named.conf.blocked";`
 - Create db.blocked and add this:
@@ -17,7 +18,13 @@ $TTL    86400   ; one day
 ````
 
 - Download generate-zonefile.sh
-- Adjust blacklist and whitelist path
 - Uncomment one URL to StevenBlack GitHub Hosts
 - Make it executable `chmod +x generate-zonefile.sh`
 - Run generate-zonefile.sh `./generate-zonefile.sh`
+
+##Router / DHCP Server
+Change DNS Server in the DHCP settings to the STATiC IP of your Debian Server. If you are asked for a second DNS server enter the same IP twice.
+
+#Optional
+- Add local blacklist and whitelist
+- Create cronjob
