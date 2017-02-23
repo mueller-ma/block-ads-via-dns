@@ -18,7 +18,6 @@ $TTL    86400   ; one day
 ````
 - cd to your home directory `cd ~`
 - Download generate-zonefile.sh `wget https://raw.githubusercontent.com/mueller-ma/block-ads-via-dns/master/generate-zonefile.sh`
-- Uncomment one URL to StevenBlack GitHub Hosts
 - Make it executable `chmod +x generate-zonefile.sh`
 - Run generate-zonefile.sh `./generate-zonefile.sh`
 
@@ -29,6 +28,7 @@ $TTL    86400   ; one day
 ##Optional
 - Add local blacklist and whitelist
 - Create cronjob
+- Change the URL to StevenBlack GitHub Hosts in `generate-zonefile.sh`
 
 #Limitations
 - https://github.com/StevenBlack/hosts/issues/243
