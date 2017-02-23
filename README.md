@@ -3,6 +3,7 @@
 #Installation
 ##Debian, Raspbian & Ubuntu
 - Install DNS Server: `sudo apt install bind9`
+- Go to the bind directory: `cd /etc/bind/`
 - Add this to /etc/bind/named.conf: `include "/etc/bind/named.conf.blocked";`
 - Create db.blocked and add this:
 ````
@@ -15,8 +16,8 @@ $TTL    86400   ; one day
         86400 ) ; min ttl  1 day
 * IN      A       0.0.0.0
 ````
-
-- Download generate-zonefile.sh
+- cd to your home directory `cd ~`
+- Download generate-zonefile.sh `wget https://raw.githubusercontent.com/mueller-ma/block-ads-via-dns/master/generate-zonefile.sh`
 - Uncomment one URL to StevenBlack GitHub Hosts
 - Make it executable `chmod +x generate-zonefile.sh`
 - Run generate-zonefile.sh `./generate-zonefile.sh`
