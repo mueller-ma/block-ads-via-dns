@@ -31,5 +31,4 @@ $TTL    86400   ; one day
 - Change the URL to StevenBlack GitHub Hosts in `generate-zonefile.sh`
 
 #Limitations
-- https://github.com/StevenBlack/hosts/issues/243
 - The db.blocked will cause some errors on bind start
