@@ -5,16 +5,16 @@
 - Install DNS Server: `sudo apt install bind9`
 - Go to the bind directory: `cd /etc/bind/`
 - Add this to /etc/bind/named.conf: `include "/etc/bind/named.conf.blocked";`
-- Create db.blocked and add this:
+- Create db.blocked and add this (taken from [here](http://www.deer-run.com/~hal/sysadmin/dns-advert.html)):
 ````
-$TTL    86400   ; one day
-@       IN      SOA      (
-        2017021701       ; serial number YYMMDDNN
-        28800   ; refresh  8 hours
-        7200    ; retry    2 hours
-        864000  ; expire  10 days
-        86400 ) ; min ttl  1 day
-* IN      A       0.0.0.0
+$TTL 24h
+
+@       IN SOA server.yourdomain.com. hostmaster.yourdomain.com. (
+               2003052800  86400  300  604800  3600 )
+
+@       IN      NS   server.yourdomain.com.
+@       IN      A    0.0.0.0
+*       IN      A    0.0.0.0
 ````
 - cd to your home directory `cd ~`
 - Download generate-zonefile.sh `wget https://raw.githubusercontent.com/mueller-ma/block-ads-via-dns/master/generate-zonefile.sh`
