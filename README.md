@@ -16,6 +16,39 @@ $TTL 24h
 @       IN      A    0.0.0.0
 *       IN      A    0.0.0.0
 ````
+- Your /etc/bind/named.conf.options should look like this:
+````
+options {
+    directory "/var/cache/bind";
+
+    // If there is a firewall between you and nameservers you want
+    // to talk to, you may need to fix the firewall to allow multiple
+    // ports to talk.  See http://www.kb.cert.org/vuls/id/800113
+
+    // If your ISP provided one or more IP addresses for stable
+    // nameservers, you probably want to use them as forwarders.
+    // Uncomment the following block, and insert the addresses replacing
+    // the all-0's placeholder.
+
+    forwarders {
+        8.8.8.8;
+        8.8.4.4;
+    };
+
+    //========================================================================
+    // If BIND logs error messages about the root key being expired,
+    // you will need to update your keys.  See https://www.isc.org/bind-keys
+    //========================================================================
+    dnssec-validation auto;
+
+    auth-nxdomain no;    # conform to RFC1035
+    listen-on-v6 { any; };
+    check-names master ignore;
+    check-names slave ignore;
+    check-names response ignore;
+};
+````
+- Replace the forwarders entries with other dns server if you do not want to use Google DNS
 - cd to your home directory `cd ~`
 - Download generate-zonefile.sh `wget https://raw.githubusercontent.com/mueller-ma/block-ads-via-dns/master/generate-zonefile.sh`
 - Make it executable `chmod +x generate-zonefile.sh`
