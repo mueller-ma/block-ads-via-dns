@@ -5,7 +5,7 @@
 - Install DNS Server: `sudo apt install bind9`
 - Go to the bind directory: `cd /etc/bind/`
 - Add this to /etc/bind/named.conf: `include "/etc/bind/named.conf.blocked";`
-- Create db.blocked and add this (taken from [here](http://www.deer-run.com/~hal/sysadmin/dns-advert.html)):
+- Create "/etc/bind/db.blocked" and add this (taken from [here](http://www.deer-run.com/~hal/sysadmin/dns-advert.html)):
 ````
 $TTL 24h
 
