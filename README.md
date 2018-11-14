@@ -1,4 +1,7 @@
 # Block ads and malware via local DNS server
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0016cad2e05d458ba0432653fcafbf18)](https://app.codacy.com/app/tdefise/block-ads-via-dns?utm_source=github.com&utm_medium=referral&utm_content=tdefise/block-ads-via-dns&utm_campaign=Badge_Grade_Dashboard)
+
 ## About this fork
 This fork as being created in order to add the bash script to my DNS docker running on Debian.
 Here are the following change to the initial forked:
