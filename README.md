@@ -1,4 +1,9 @@
 # Block ads and malware via local DNS server
+# About this fork
+This fork as being created in order to add the bash script to my DNS docker running on Debian.
+Here are the following change to the initial forked :
+- I use StevenBlack list of "adware + malware + fakenews + gambling" : https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts
+- As it's runing inside a contaiser which use System V, I use "service bind9 start"
 
 # Installation
 ## Debian, Raspbian & Ubuntu
