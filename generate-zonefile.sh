@@ -8,11 +8,11 @@ date
 
 # Set tempfiles
 # All_domains will contain all domains from all lists, but also duplicates and ones which are whitelisted
-all_domains=$(tempfile)
+all_domains=$(mktemp)
 # Like above, but no duplicates or whitelisted URLs
-all_domains_uniq=$(tempfile)
+all_domains_uniq=$(mktemp)
 # We don't write directly to the zonefile. Instead to this temp file and copy it to the right directory afterwards
-zonefile=$(tempfile)
+zonefile=$(mktemp)
 
 # Define local black and white lists
 # Uncomment if you have no local files
